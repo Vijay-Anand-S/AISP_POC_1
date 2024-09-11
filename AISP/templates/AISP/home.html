@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HOME Page</title>
+</head>
+<body>
+    <h1>HOME Page</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Search</button>
+    </form>
+
+    {% if results %}
+        <h2>{{ results }}</h2>
+    {% endif %}
+</body>
+</html>
